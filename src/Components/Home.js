@@ -1,0 +1,46 @@
+import React from "react";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+const Home = () => {
+  return (
+    <section>
+      {/* @HERO CONTAINER */}
+      <div className="w-full relative flex flex-col md:flex-row mx-auto text-gray-700 shadow-md overflow-hidden">
+        {/* @DESCRIPTION */}
+        <div className="basis-[400px] max-w-[400px] mx-20 font-bold lg:ml-[20rem]">
+          <h1 className="text-[6rem]">Web Design</h1>
+          <p className="text-[1.5rem] tracking-[.7rem] font-bold">
+            LANDING PAGE
+          </p>
+
+          <p className="mt-10 text-justify indent-3">
+            Web design refers to the design of websites that are displayed on
+            the internet. It usually refers to the user experience aspects of
+            website development rather than software development. Web design
+            used to be focused on designing websites for desktop browsers;
+            however, since the mid-2010s, design for mobile and tablet browsers
+            has become ever-increasingly important.
+          </p>
+          <div className="btn m-3 flex  justify-center align-center rounded-full bg-slate-800 max-w-[9rem] text-white p-2 hover:bg-slate-900 hover:cursor-pointer ">
+            {" "}
+            LEARN MORE{" "}
+          </div>
+          {/* SOCMED CONTAINER */}
+          <div className="my-[2rem]  flex flex-row space-x-3">
+            <FaFacebookF className="text-bg-slate-800 w-8 h-8 hover:h9 hover:w-9 hover:text-bg-slate-900 hover:cursor-pointer " />
+            <FaTwitter className="text-bg-slate-800 w-8 h-8 hover:h9 hover:w-9 hover:text-bg-slate-900 hover:cursor-pointer" />
+            <FaInstagram className="text-bg-slate-800 w-8 h-8 hover:h9 hover:w-9 hover:text-bg-slate-900 hover:cursor-pointer" />
+          </div>
+        </div>
+        <div className="md:-ml-[10rem] mx-auto">
+          <img
+            className="mt-[8rem] md:ml-[100px] m-auto min-w-[200px] max-w-[510px]"
+            src="https://static.vecteezy.com/system/resources/previews/005/962/428/original/illustration-graphic-cartoon-character-of-system-update-vector.jpg"
+            alt="woman with a computer"
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Home;
