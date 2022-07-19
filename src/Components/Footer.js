@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import navigation from "./Utils/NavItems";
 const Footer = () => {
   return (
-    <footer className="bg-slate-400 w-full flex shadow-md relative bottom-0 ">
+    <footer className="bg-slate-400 w-full flex shadow-md relative max-h-[200px] bottom-0 ">
       <div className="flex-row-reverse max-w-7xl  mx-auto py-12 px-4 sm:px-6 md:flex md:items-center w-full md:flex-row md:justify-between lg:px-8">
         <div className="flex justify-center space-x-6 md:order-2">
           {navigation.map((item, index) => (

@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-import Profile from "./Components/Profile";
-import { Routes, Route } from "react-router-dom";
-import Home from "./Components/Home";
-import AboutUs from "./Components/AboutUs";
+
 import Navbar2 from "./Components/Navbar2";
 import Footer from "./Components/Footer";
 import { UserContext } from "./Components/States/User";
-import Documentations from "./Components/Documentations";
+import AnimatedRoutes from "./Components/AnimatedRoutes";
 
 const App = () => {
   const [user, setUser] = useState({
@@ -22,12 +19,7 @@ const App = () => {
     <>
       <UserContext.Provider value={{ user, setUser }}>
         <Navbar2 />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<Profile value={user} />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/documentations" element={<Documentations />} />
-        </Routes>
+        <AnimatedRoutes />
         <Footer />
       </UserContext.Provider>
     </>

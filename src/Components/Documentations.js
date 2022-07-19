@@ -1,6 +1,6 @@
 import React from "react";
 import Article from "./Utils/Article";
-
+import { motion } from "framer-motion";
 const articles = [
   {
     name: "The Disease of More",
@@ -45,14 +45,20 @@ const articles = [
 ];
 const Documentations = () => {
   return (
-    <section>
-      <div className="flex relative flex-col min-h-[750px]">
-        <h1 className="mx-auto text-teal-600 md:text-[2rem] font-bold tracking-[1rem]  ">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <div
+        className={`flex relative space-y-5 flex-col min-h-[750px] min-h-[${window.innerHeight}px]`}
+      >
+        <h1 className="mx-auto text-teal-600 my-10 hover:cursor-pointer text-[1.8rem] md:text-[2rem] font-bold md:tracking-[1rem]  ">
           {" "}
           DOCUMENTATIONS
         </h1>
 
-        <div className="ml-[2rem] flex flex-wrap mx-auto">
+        <div className=" flex flex-wrap align-center justify-center ">
           {articles.map((item, index) => {
             return (
               <Article
@@ -66,7 +72,7 @@ const Documentations = () => {
           })}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

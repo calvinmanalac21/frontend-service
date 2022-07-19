@@ -1,12 +1,20 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { motion } from "framer-motion";
 const Home = () => {
   return (
-    <section>
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       {/* @HERO CONTAINER */}
-      <div className="w-full relative flex flex-col md:flex-row mx-auto text-gray-700 shadow-md overflow-hidden">
+      {/* w-full min-h-[${window.innerHeight}px] xl:space-x-[10rem]  relative flex flex-col md:flex-row mx-auto text-gray-700 shadow-md overflow-hidden */}
+      <div
+        className={`w-full min-h-[${window.innerHeight}px]   relative flex flex-wrap  text-gray-700 shadow-md overflow-hidden`}
+      >
         {/* @DESCRIPTION */}
-        <div className="basis-[400px] max-w-[400px] mx-20 font-bold lg:ml-[20rem]">
+        <div className="basis-[400px] max-w-[400px] mx-20 font-bold xl:ml-[20rem]">
           <h1 className="text-[6rem]">Web Design</h1>
           <p className="text-[1.5rem] tracking-[.7rem] font-bold">
             LANDING PAGE
@@ -31,15 +39,15 @@ const Home = () => {
             <FaInstagram className="text-bg-slate-800 w-8 h-8 hover:h9 hover:w-9 hover:text-bg-slate-900 hover:cursor-pointer" />
           </div>
         </div>
-        <div className="md:-ml-[10rem] mx-auto">
+        <div className="mx-auto">
           <img
-            className="mt-[8rem] md:ml-[100px] m-auto min-w-[200px] max-w-[510px]"
+            className="mt-[8rem] md:ml-[100px] m-auto min-w-[150px] w-auto max-w-[510px]"
             src="https://static.vecteezy.com/system/resources/previews/005/962/428/original/illustration-graphic-cartoon-character-of-system-update-vector.jpg"
             alt="woman with a computer"
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

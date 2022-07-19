@@ -1,10 +1,15 @@
 import React from "react";
-import Profile from "./Profile";
 import user from "./Utils/Team";
-
+import { motion } from "framer-motion";
+import ProfileHelper from "./Utils/ProfileHelper";
 const AboutUs = () => {
   return (
-    <div className="relative w-full mx-auto flex flex-col md:flex-row min-h-[750px]">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="relative w-full mx-auto flex flex-col md:flex-row min-h-[750px]"
+    >
       <div className="mx-auto lg:mx-[10rem] flex flex-col  max-w-[25rem] ">
         <h1 className="m-5 text-[4rem] text-teal-800 font-bold text-center">
           MEET OUR TEAM
@@ -22,10 +27,14 @@ const AboutUs = () => {
       </div>
       <div className="flex flex-col md:flex-wrap lg:flex-row  lg:space-x-10 overflow-hidden">
         {user.map((item, index) => (
-          <Profile key={index} class=" w-[20rem] h-[10rem] " value={item} />
+          <ProfileHelper
+            key={index}
+            class=" w-[20rem] h-[10rem] "
+            value={item}
+          />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
